@@ -6,8 +6,33 @@
     </div>
 
     @if(country) {
-    <h1 class="text-center font-thin text-4xl md:text-6xl">{{country[0].name.common}}</h1>
+    <h1 class="text-center font-bold-sm text-4xl md:text-6xl">{{country[0].name.common}}</h1>
+      <div class="h-dvh px-8 rounded-md flex justify-center">
 
-    }
+        <div class="px-10 py-10 h-70 w-80 mt-10 rounded-md">
+          <img [src]="country[0].flags.png" class="rounded-md" alt="">
+        </div>
 
-</div>
+        <div class="display-block align-center w-180 rounded-[5rem]">
+
+            <div class="justify-center px-10 py-10 h-40 w-40 mt-10 rounded-lg">
+              <img [src]="country[0].coatOfArms.png" class="rounded-md" alt="">
+
+            </div>
+            <div class="justify-center w-100 rounded-[5rem]">
+
+              <p class="text-center font-thin mt-20 text-4xl">{{country[0].name.official}}</p>
+              <p class="text-center font-thin mt-1 text-3xl"> Continent : {{country[0].continents}}</p>
+              <p class="text-center font-thin mt-1 text-3xl"> Capital: {{country[0].capital}}</p>
+
+              <p class="text-center font-thin mt-1 text-3xl"> Currency : {{currencies[0][1].name}}</p>
+              <p class="text-center font-thin mt-1 text-2xl"> Languages : {{languages[0][1]}}</p>
+              <p class="text-center font-thin mt-1 text-2xl"> Subregion : {{country[0].subregion}}</p>
+              <p class="text-center font-thin mt-1 text-2xl"> Population : {{country[0].population}}</p>
+
+            </div>
+        </div>
+      </div>
+      }
+
+  </div>
