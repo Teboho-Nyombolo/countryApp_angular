@@ -22,14 +22,26 @@
             <div class="justify-center w-100 h-dvh rounded-[5rem]">
 
               <p class="text-center font-thin mt-20 text-4xl">{{country[0].name.official}}</p>
-              <p class="text-center font-thin mt-1 text-3xl"> Continent : {{country[0].continents}}</p>
-              <p class="text-center font-thin mt-1 text-3xl"> Capital: {{country[0].capital}}</p>
+              <p class="text-center font-bold-sm mt-1 text-3xl"> Continent </p>
+              <p class="text-center font-thin mt-1 text-3xl">{{country[0].continents}}</p>
 
-              <p class="text-center font-thin mt-1 text-3xl"> Currency : {{currencies[0][1].name}}</p>
-              <p class="text-center font-thin mt-1 text-3xl">Languages :</p>
+              @if(country[0].capital){
+                <p class="text-center font-bold-sm mt-1 text-3xl"> Capital </p>
+                <p class="text-center font-thin mt-1 text-3xl">{{country[0].capital}}</p>
+              }
+              <p class="text-center font-bold-sm mt-1 text-3xl"> Currency </p>
+              <p class="text-center font-thin mt-1 text-3xl">{{currencies[0][1].name}}</p>
+              <p class="text-center font-bold-sm mt-1 text-3xl">Languages </p>
               <p class="text-center font-thin mt-1 text-2xl" *ngFor="let item of languages">{{item[1]}}</p>
-              <p class="text-center font-thin mt-1 text-2xl"> Subregion : {{country[0].subregion}}</p>
-              <p class="text-center font-thin mt-1 text-2xl"> Population : {{country[0].population}}</p>
+              <p class="text-center font-bold-sm mt-1 text-3xl"> Subregion </p>
+              <p class="text-center font-thin mt-1 text-2xl">{{country[0].subregion}}</p>
+              <p class="text-center font-bold-sm mt-1 text-3xl"> Population </p>
+              <p class="text-center font-thin mt-1 text-2xl">{{country[0].population}}</p>
+              <p class="text-center font-bold-sm mt-1 text-3xl"> Timezone </p>
+              <p class="text-center font-thin mt-1 text-2xl">{{country[0].timezones[0]}}</p>
+              <p class="text-center font-bold-sm mt-1 text-3xl"> UN-Member </p>
+              <p class="text-center font-thin mt-1 text-2xl">{{country[0].unMember}}</p>
+
 
             </div>
         </div>
