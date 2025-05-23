@@ -2,10 +2,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CountryService } from '../../services/country.service';
 import { LoaderService } from '../../services/loader.service';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-info',
-  imports: [RouterLink],
+  imports: [RouterLink, NgFor],
   templateUrl: './info.component.html',
   styleUrl: './info.component.css',
 })
